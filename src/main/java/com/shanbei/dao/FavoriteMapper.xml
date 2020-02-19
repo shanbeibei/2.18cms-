@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shanbei.dao.FavoriteMapper">
+	<select id="select" resultType="favorite">
+		select * from cms_favorite ORDER BY created DESC
+	</select>
+	<delete id="delete">
+		delete from cms_favorite where id=${id}
+	</delete>
+	<insert id="add">
+		insert cms_favorite set text='${fa.text}',url='${fa.url}',userid=${fa.userid},created='${fa.created}'
+	</insert>
+</mapper>
