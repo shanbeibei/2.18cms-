@@ -28,8 +28,11 @@
 				<div class="list-group" style="margin-top: 20px">
 					<a id="aaa" href="#" data="/my/article/articles" class="list-group-item list-group-item-action active">
 						我的文章 </a> <a href="#" data="/my/article/publish"
-						class="list-group-item list-group-item-action">发布文章</a> <a
-						href="#" class="list-group-item list-group-item-action">我的收藏</a>
+						class="list-group-item list-group-item-action">发布文章</a>
+						
+						 <a href="#" data="/my/article/favorites"
+						
+						  href="#" class="list-group-item list-group-item-action">我的收藏</a>
 						<a
 						href="#" class="list-group-item list-group-item-action" data="/my/article/comments">我的評論</a>
 						 <a

@@ -85,15 +85,15 @@
 //更新文章热门状态   1:热门, 0:非热门
  function update(id,obj){
  	//要改变为的状态
- 	var status =$(obj).text()=="非热门"?1:0;
+ 	var hot =$(obj).text()=="非热门"?1:0;
  	
- 	$.post("/admin/article/update",{id:id,status:status},function(flag){
+ 	$.post("/admin/article/update",{id:id,hot:hot},function(flag){
  		if(flag){
  			//alert("操作成功");
  			//改变内容
- 			$(obj).text(status==1?"热门":"非热门");
+ 			$(obj).text(hot==1?"热门":"非热门");
  			//改变颜色
- 			$(obj).attr("class",status==1?"btn btn-warning":"btn btn-success")
+ 			$(obj).attr("class",hot==1?"btn btn-warning":"btn btn-success")
  		}else{
  			alert("操作失败")
  		}

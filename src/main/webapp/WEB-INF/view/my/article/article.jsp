@@ -18,6 +18,5 @@
 	  <h1 align="center">${a.title }</h1>
 	  <h3>${a.user.username} <fmt:formatDate value="${a.created }" pattern="yyyy-MM-dd HH:mm:ss"/></h3>
 	  <div align="center"> ${a.content }</div> 
-	
 	</div>
 </html>

@@ -13,12 +13,22 @@
 <link href="/resource/css/bootstrap.css" rel="stylesheet">
 
 <script type="text/javascript">
-
+	function shou(){
+		var text='${article.title}'
+			var url="http:localhost:90/article?id=20";
+			 $.post("/my/shou/add",{text:text,url:url},function(flag){
+				  if(flag){
+					  alert("操作成功");
+				  }else{
+					  alert("操作失败");
+				  }
+			  })
+	}
 </script>
 </head>
 <body>
 	<div class="container">
-		<h1 align="center">${article.title }</h1>
+		<h1 align="center">${article.title }</h1><input type="button" value="收藏" onclick="shou()">
 		<span style="float: right"><a href="/complain?id=${article.id }">投诉</a></span>
 
 		<h3>${a.user.username}

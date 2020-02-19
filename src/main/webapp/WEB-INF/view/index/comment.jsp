@@ -38,11 +38,13 @@ String htmlData = request.getParameter("content") != null ? request.getParameter
 	</script>
 </head>
 <body>
+		
 	<%=htmlData%>
 	<form name="example" method="post" action="demo.jsp">
 		<textarea name="content" cols="100" rows="8" style="width:700px;height:200px;visibility:hidden;"><%=htmlspecialchars(htmlData)%></textarea>
 		<br />
 		<input type="button" name="button" value="提交内容"  onclick="addComment()"/>
+		<!-- <button type="button" class="btn btn-info"  onclick="favorites()">收藏</button> -->
 	</form>
 </body>
 <script type="text/javascript">
@@ -62,6 +64,12 @@ String htmlData = request.getParameter("content") != null ? request.getParameter
 	  
 	  
   }
+  function favorites() {
+	  alert("收藏成功");
+	$.post(
+		
+	)
+}
 </script>
 </html>
 <%!

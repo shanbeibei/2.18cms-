@@ -24,7 +24,7 @@ function add(){
 		url:"/complain",
 		data:formData,
 		processData : false,
-		// 告诉jQuery不要去设置Content-Type请求头
+		// 告诉jQuery不要去设置Content-Type请求头 
 		contentType : false,
 		success:function(flag){
 			if(flag){
